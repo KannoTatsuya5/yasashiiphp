@@ -36,4 +36,3 @@
         echo 'エラー発生: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES) . '<br>';
         exit;
     }
-?>
