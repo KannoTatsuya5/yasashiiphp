@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <h1>レシピの一覧</h1>
+    <a href="form.html">レシピの新規登録</a>
     <?php
 
     use SebastianBergmann\CodeCoverage\Report\PHP;
@@ -27,6 +29,8 @@
 
         //SQL文の実行
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 
         //PHP_EOL = 改行するための記述
         echo '<table>' . PHP_EOL;
