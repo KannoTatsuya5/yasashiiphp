@@ -21,7 +21,8 @@
         $stmt->bindValue(5, $howto, PDO::PARAM_STR);
         $stmt->execute();
         $dbh = null;
-        echo 'レシピの登録が完了しました。';
+        echo 'レシピの登録が完了しました。<br>';
+        echo '<a href="index.php">トップページへ戻る</a>';
     }catch (PDOException $e) {
         echo 'エラー発生: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES) . '<br>';
         exit;

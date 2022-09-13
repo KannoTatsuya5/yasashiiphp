@@ -18,6 +18,8 @@
         $stmt->execute();
         $dbh = null;
         echo 'ID: ' . htmlspecialchars($id, ENT_QUOTES) . 'の削除が完了しました';
+        echo '<br>';
+        echo '<a href="index.php">トップページへ戻る</a>';
     }  catch (PDOException $e) {
         echo 'エラー発生: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES) . '<br>';
         exit;

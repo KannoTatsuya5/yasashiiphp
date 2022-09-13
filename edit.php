@@ -16,6 +16,8 @@ try {
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $dbh = null;
+   
+
 } catch (PDOException $e) {
     echo 'エラー発生: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES) . '<br>';
     exit;
@@ -54,6 +56,7 @@ try {
         <textarea name="howto" cols="40" rows="4" maxlength="320"><?= htmlspecialchars($result['howto'], ENT_QUOTES) ?></textarea>
         <br>
         <input type="submit" value="送信">
+        <a href="index.php">トップページへ戻る</a>
     </form>
 </body>
 
