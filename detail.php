@@ -1,6 +1,6 @@
 <?php
-    $user = 'mysql';
-    $pass = 'mysql';
+    require_once __DIR__ . '/../../db_config.php';
+    
     if(empty($_GET['id'])) {
         echo 'IDを正しく入力してください';
         exit;
