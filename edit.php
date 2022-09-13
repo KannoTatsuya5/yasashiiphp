@@ -33,7 +33,7 @@ try {
 
 <body>
     レシピの投稿<br>
-    <form action="update.php?id= <?= htmlspecialchars($result['id'], ENT_QUOTES) ?>">
+    <form method="post" action="update.php?id= <?= htmlspecialchars($result['id'], ENT_QUOTES) ?>">
         料理名: <input type="text" name="recipe_name" value="<?php echo htmlspecialchars($result['recipe_name'], ENT_QUOTES); ?>"><br>
         カテゴリー:
         <select name="category" id="">
@@ -44,7 +44,7 @@ try {
         <br>
         難易度:
         <input type="radio" name="difficulty" value="1" <?php if ($result['difficulty'] === 1) echo 'checked' ?>>簡単
-        <input type="radio" name="difficulty" value="2" <?php if ($result['difficulty'] === 2) echo 'checked' ?>>普通
+        <input type="radio" name="difficulty" value="2" <?php if ($result['difficulty'] === 2) echo 'checked' ?> checked>普通
         <input type="radio" name="difficulty" value="3" <?php if ($result['difficulty'] === 3) echo 'checked' ?>>難しい
         <br>
         予算:
